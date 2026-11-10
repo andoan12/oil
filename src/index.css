@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Be Vietnam Pro', 'Inter', 'Roboto', sans-serif;
+  }
+}
+
+/* Custom glowing animations for presentation mode */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.55), 0 0 50px rgba(16, 185, 129, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.85), 0 0 80px rgba(52, 211, 153, 0.45);
+  }
+}
+
+.btn-release-glow {
+  animation: pulse-glow 2.2s infinite ease-in-out;
+}
